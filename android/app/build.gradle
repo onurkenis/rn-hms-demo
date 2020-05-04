@@ -196,6 +196,9 @@ dependencies {
 
     implementation 'com.huawei.agconnect:agconnect-core:1.0.0.300'
 
+    implementation 'com.huawei.hms:hwid:3.0.3.301'
+
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
