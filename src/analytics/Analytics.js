@@ -1,10 +1,25 @@
 import React from 'react';
 import haInterface from 'react-native-ha-interface';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text, ToastAndroid } from 'react-native';
 import { styles } from './styles';
+import { useConfig } from '../AppContext';
 
 const Analytics = () => {
+  const { isHmsAvailable } = useConfig();
+  ToastAndroid.show(`isHmsAvailable: ${isHmsAvailable}`, ToastAndroid.SHORT);
+
   const sendEvent = () => {
+    /*
+     * You can trigger firebase or hms analytics conditionally.
+     *
+     * Assume that we imported analytics 
+     * from @react-native-firebase/analytics;
+     *
+     * isHmsAvailable 
+     *   ? analytics.logEvent(eventName, object)
+     *   : haInterface.onEvent(eventName, object)
+     *
+     */
     haInterface.onEvent('testEvent', {
       testString: 'TestValue',
       testInt: 20,
