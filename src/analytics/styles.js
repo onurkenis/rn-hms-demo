@@ -3,14 +3,10 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    height: 400,
   },
   buttonContainer: {
     justifyContent: 'space-between',
-    height: 150,
+    height: 80,
     margin: 20,
-  },
-  log: {
-    padding: 20,
   },
 });
