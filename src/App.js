@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from 'react-native';
+import Push from './push';
 
 const App = () => {
-  return <Text>Hello world</Text>;
+  return <Push />;
 };
 
 export default App;
