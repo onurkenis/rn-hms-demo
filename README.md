@@ -1,26 +1,18 @@
 # React Native & HMS Sample
 
-This simple repo implements Account Kit, Push Kit and Analytics Kit of HMS ecosystem and aims to be playground for integration of other kits.
+This project is created to show HMS usage with React Native. It uses offically released react native modules Push Kit and Analytics Kit. Also it has custom bridge implementations for Account Kit and `isHmsAvailable()` function to help developers understand HMS integration with different aspects.
 
-
-## Installing dependencies
-
-```sh
-npm install
-```
-If you are having issues, you can follow [getting started.](https://facebook.github.io/react-native/docs/getting-started.html)
-
+## Preparations
+Save the generated agconnect-services.json file to `android/app` directory in the RN project.
 
 ## Running the application
 
 ```sh
-cd reactnative-hms-bridge
-npx react-native run-android --variant=HmsDebug
+git clone https://github.com/onurkenis/rn-hms-demo.git
+cd rn-hms-demo
+yarn install        # install dependencies
+yarn run android    # start dev server
 ```
-For other variants, check productFlavors in `app/build.gradle`  
 
-## Contributing
-
-Commit messages must comply with [conventional commits](https://www.conventionalcommits.org). Otherwise [commitlint](https://github.com/conventional-changelog/commitlint) will complain. :)
-
-Thanks to [commitizen](https://github.com/commitizen), `npm run commit` command can be used to create commit messages complying with conventional commits.
+#### yarn run android
+Starts the development server and loads your app on connected Android device or emulator
