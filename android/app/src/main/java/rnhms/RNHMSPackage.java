@@ -11,12 +11,15 @@ import java.util.Collections;
 import java.util.List;
 
 import rnhms.account.RNHMSLogin;
+import rnhms.utils.RNHMSUtils;
+
 public class RNHMSPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new RNHMSLogin(reactContext));
+        modules.add(new RNHMSUtils(reactContext));
 
         return modules;
     }
