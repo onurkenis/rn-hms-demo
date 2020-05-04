@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     display: 'flex',
     height: 400,
+    marginTop: 10,
   },
   buttonContainer: {
     justifyContent: 'space-between',
@@ -12,5 +13,9 @@ export const styles = StyleSheet.create({
   },
   log: {
     padding: 20,
+  },
+  header: {
+    textAlign: 'center',
+    fontSize: 20,
   },
 });

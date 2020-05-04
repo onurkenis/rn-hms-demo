@@ -1,6 +1,6 @@
 import React from 'react';
 import haInterface from 'react-native-ha-interface';
-import { Button, View } from 'react-native';
+import { Button, View, Text } from 'react-native';
 import { styles } from './styles';
 
 const Analytics = () => {
@@ -20,6 +20,7 @@ const Analytics = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.header}>Analytics Kit</Text>
       <View style={styles.buttonContainer}>
         <Button onPress={sendEvent} title="Send Analytics Event" />
         <Button onPress={getAppInstanceID} title="Get AAID" />

@@ -48,6 +48,7 @@ const Push = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.header}>Push Kit</Text>
       <View style={styles.buttonContainer}>
         <Button onPress={getToken} title="Get Token" />
         <Button onPress={deleteToken} title="Delete Token" />
