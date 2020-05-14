@@ -31,7 +31,12 @@ const App = () => {
       .catch(err => console.log('Failed to get last location', err));
   }, []);
 
-  return <Button title="Get last location" onPress={getLocation} />;
+  return (
+    <>
+      <Permissions />
+      <Button title="Get last location" onPress={getLocation} />
+    </>
+  );
 };
 
 export default App;
