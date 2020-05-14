@@ -192,6 +192,10 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
+    implementation project(':react-native-hms-location')
+    implementation project(':react-native-hwpush')
+    implementation project(':react-native-ha-interface')
+
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     implementation 'com.huawei.agconnect:agconnect-core:1.0.0.300'

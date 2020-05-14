@@ -13,6 +13,7 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-ha-interface": "./hms_kits/react-native-ha-interface",
+    "react-native-hms-location": "./hms_kits/react-native-hms-location",
     "react-native-hwpush": "./hms_kits/react-native-hwpush/"
   },
   "devDependencies": {
