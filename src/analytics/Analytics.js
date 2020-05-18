@@ -2,10 +2,10 @@ import React from 'react';
 import haInterface from 'react-native-ha-interface';
 import { Button, View, Text, ToastAndroid } from 'react-native';
 import { styles } from './styles';
-import { useConfig } from '../AppContext';
 
 const Analytics = () => {
-  const { isHmsAvailable } = useConfig();
+  const isHmsAvailable = await NativeModules.HmsUtils.isHmsAvailable();
+
   ToastAndroid.show(`isHmsAvailable: ${isHmsAvailable}`, ToastAndroid.SHORT);
 
   const sendEvent = () => {
