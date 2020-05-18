@@ -1,6 +1,10 @@
 # React Native & HMS Sample
 
-This project is created to show HMS usage with React Native. It uses offically released react native modules Push Kit and Analytics Kit. Also it has custom bridge implementations for Account Kit and `isHmsAvailable()` function to help developers understand HMS integration with different aspects.
+This project is created to show HMS usage with React Native. 
+
+It uses officially released react native modules Push Kit, Analytics Kit and Location Kit. 
+
+Also it has custom bridge implementations for Account Kit and `isHmsAvailable()` function to help developers understand HMS integration with different aspects.
 
 ## Preparations
 Save the generated agconnect-services.json file to `android/app` directory in the RN project.
