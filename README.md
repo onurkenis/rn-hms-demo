@@ -6,8 +6,6 @@ It uses officially released react native modules Push Kit, Analytics Kit and Loc
 
 Also it has custom bridge implementations for Account Kit and `isHmsAvailable()` function to help developers understand HMS integration with different aspects.
 
-## Preparations
-Save the generated agconnect-services.json file to `android/app` directory in the RN project.
 
 ## Running the application
 
