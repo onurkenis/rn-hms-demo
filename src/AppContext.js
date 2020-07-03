@@ -1,23 +1,12 @@
-import React, { useContext, useState } from 'react';
-import { NativeModules } from 'react-native';
+import React, { useContext } from 'react';
 
 const Config = React.createContext({
-  isHmsAvailable: '',
+  isHmsAvailable: false,
 });
 
 export const useConfig = () => useContext(Config);
 
-export const AppContext = ({ children }) => {
-  const [isHmsAvailable, setIsHmsAvailable] = useState(false);
-
-  async function checkHmsAvailability() {
-    const availability = await NativeModules.HmsUtils.isHmsAvailable();
-    setIsHmsAvailable(availability);
-  }
-
-  checkHmsAvailability();
-
+export const AppContext = ({ children, isHmsAvailable }) => {
   const context = { isHmsAvailable };
-
   return <Config.Provider value={context}>{children}</Config.Provider>;
 };

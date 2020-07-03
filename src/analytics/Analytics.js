@@ -2,9 +2,16 @@ import React from 'react';
 import haInterface from 'react-native-ha-interface';
 import { Button, View, Text, ToastAndroid } from 'react-native';
 import { styles } from './styles';
+import { useConfig } from '../AppContext';
 
 const Analytics = () => {
-  const isHmsAvailable = await NativeModules.HmsUtils.isHmsAvailable();
+  /*
+   * You can retrieve availability from
+   * any children by following bellow
+   * usage:
+   *
+   */
+  const { isHmsAvailable } = useConfig();
 
   ToastAndroid.show(`isHmsAvailable: ${isHmsAvailable}`, ToastAndroid.SHORT);
 
@@ -12,10 +19,10 @@ const Analytics = () => {
     /*
      * You can trigger firebase or hms analytics conditionally.
      *
-     * Assume that we imported analytics 
+     * Assume that we imported analytics
      * from @react-native-firebase/analytics;
      *
-     * isHmsAvailable 
+     * isHmsAvailable
      *   ? analytics.logEvent(eventName, object)
      *   : haInterface.onEvent(eventName, object)
      *
